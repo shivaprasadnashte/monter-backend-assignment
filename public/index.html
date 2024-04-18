@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project README</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #fff;
+        }
+
+        code {
+            background-color: #555;
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: #eee;
+        }
+
+        pre {
+            background-color: #555;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        pre code {
+            background-color: inherit;
+            color: inherit;
+            padding: 0;
+        }
+
+        .response {
+            background-color: #444;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .response code {
+            background-color: inherit;
+            color: inherit;
+            padding: 0;
+        }
+
+        .response code::before {
+            content: "Response:";
+            display: block;
+            color: #aaa;
+        }
+
+        .route {
+            margin-top: 20px;
+        }
+
+        .route h3 {
+            margin-bottom: 5px;
+        }
+
+        .method {
+            font-weight: bold;
+        }
+
+        .method,
+        .description {
+            margin-bottom: 10px;
+        }
+
+        .request,
+        .headers {
+            margin-top: 10px;
+        }
+
+        .note {
+            color: #aaa;
+            font-style: italic;
+        }
+
+        .screenshot {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Monter backend</h1>
+
+    <h2>Description</h2>
+    <p>This project is a Node.js application with MongoDB as the database, implementing RESTful APIs for user
+        registration, login, verification, and profile management. It follows industry standards for clean code and
+        includes features such as email OTP verification and JWT token-based authentication.</p>
+
+    <h2>Installation</h2>
+    <ol>
+        <li>Clone the repository:
+            <pre><code>git clone https://github.com/shivaprasadnashte/monter-backend-assignment</code></pre>
+        </li>
+        <li>Install dependencies:
+            <pre><code>npm install</code></pre>
+        </li>
+        <li>Set up environment variables:
+            <ul>
+                <li>Create a <code>.env</code> file in the root directory.</li>
+                <li>Define the following variables:
+                    <pre><code>
+PORT
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+PUBLIC_MAIL_ID
+PUBLIC_PASSWORD</code></pre>
+                </li>
+            </ul>
+        </li>
+        <li>Run the application:
+            <pre><code>node index.js</code></pre>
+        </li>
+    </ol>
+
+    <h2>API Routes</h2>
+
+    <div class="route">
+        <h3>/api/users/register</h3>
+        <p class="method">Method: POST</p>
+        <p class="description">Description: Register a new user with email and password.</p>
+        <div class="request">
+            <p>Request Body:</p>
+            <pre><code>{
+    "email": "example@example.com",
+    "password": "password123"
+}</code></pre>
+        </div>
+        <div class="response">
+            <p>Response:</p>
+            <pre><code>{
+    "message": "User registered successfully. Please verify your email."
+}</code></pre>
+        </div>
+    </div>
+
+</body>
+
+</html>
