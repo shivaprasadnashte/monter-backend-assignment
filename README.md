@@ -1,4 +1,4 @@
-# Project Name
+# Monter Backend
 
 ## Description
 
@@ -8,8 +8,8 @@ This project is a Node.js application with MongoDB as the database, implementing
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your/repository.git
-    ```
+[    git clone https://github.com/your/repository.git
+](https://github.com/shivaprasadnashte/monter-backend-assignment)    ```
 
 2. Install dependencies:
     ```bash
@@ -20,14 +20,16 @@ This project is a Node.js application with MongoDB as the database, implementing
     - Create a `.env` file in the root directory.
     - Define the following variables:
         ```
-        PORT=3000
+        PORT
         MONGODB_URI=your_mongodb_connection_string
         JWT_SECRET=your_jwt_secret
+        PUBLIC_MAIL_ID
+        PUBLIC_PASSWORD
         ```
 
 4. Run the application:
     ```bash
-    npm start
+    node index.js
     ```
 
 ## API Routes
@@ -137,23 +139,6 @@ This project is a Node.js application with MongoDB as the database, implementing
             "message": "User details added successfully."
         }
         ```
-
-## Screenshots
-
-- Include screenshots of each API request from Postman.
   
 ## MongoDB Schema
-
-- Provide a schema diagram or description of the MongoDB collections used in the application.
-
-## Conclusion
-
-- Summarize the project and any additional notes.
-
-## Contributors
-
-- List the contributors to the project.
-  
-## License
-
-- Specify the project's license (e.g., MIT License).
+![image](https://github.com/shivaprasadnashte/monter-backend-assignment/assets/113913102/e3785b86-ba7b-4e85-82ea-673e1b0dcb59)
