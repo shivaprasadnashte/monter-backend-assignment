@@ -8,8 +8,8 @@ This project is a Node.js application with MongoDB as the database, implementing
 
 1. Clone the repository:
     ```bash
-[    git clone https://github.com/your/repository.git
-](https://github.com/shivaprasadnashte/monter-backend-assignment)    ```
+    [    git clone https://github.com/your/repository.git
+    ](https://github.com/shivaprasadnashte/monter-backend-assignment)    ```
 
 2. Install dependencies:
     ```bash
