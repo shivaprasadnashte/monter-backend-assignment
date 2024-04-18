@@ -4,7 +4,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 import { sendMail } from "../utills/sendMail.js";
-import generateOTP  from "../utills/generateOTP.js";
+import generateOTP from "../utills/generateOTP.js";
 
 dotenv.config();
 
@@ -112,7 +112,7 @@ export const loginUser = async (req, res) => {
 
 export const getUser = async (req, res) => {
   try {
-    const token = req.headers.authorization?.split(" ")[1];
+    const token = await req.headers.authorization?.split(" ")[1];
     if (!token) {
       return res.status(401).json({ message: "Access Denied" });
     }
@@ -121,7 +121,7 @@ export const getUser = async (req, res) => {
     if (!user) {
       return res.status(401).json({ message: "Invalid Token" });
     }
-    const userData = await User.findOne(user.email).select([
+    const userData = await User.findById(user.id).select([
       "-password",
       "-otp",
       "-isVerified",
