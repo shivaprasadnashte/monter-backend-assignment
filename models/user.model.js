@@ -14,11 +14,10 @@ const userSchema = new mongoose.Schema({
   },
   isVerified: {
     type: Boolean,
-    required: true,
+    default: false,
   },
   location: {
     type: String,
-    required: true,
   },
   age: {
     type: Number,
