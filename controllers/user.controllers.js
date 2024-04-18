@@ -76,6 +76,7 @@ export const resendOTP = async (req, res) => {
     const otp = generateOTP();
     user.otp = otp;
     await user.save();
+    await sendMail(email,otp)
     res.status(200).json({ message: "OTP sent successfully" });
   } catch (error) {
     console.log(error);

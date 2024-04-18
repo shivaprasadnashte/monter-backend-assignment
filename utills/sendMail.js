@@ -16,7 +16,10 @@ export async function sendMail(email, otp) {
     from: process.env.PUBLIC_MAIL_ID,
     to: email,
     subject: "Hello from Monter",
-    text: "Your OTP is: " + otp +" Please verify your email and don't share this OTP with anyone",
+    text:
+      "Your OTP is: " +
+      otp +
+      " Please verify your email and don't share this OTP with anyone",
   };
 
   await transporter.sendMail(mailOptions);
